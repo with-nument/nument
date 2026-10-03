@@ -127,7 +127,7 @@ function Footer() {
       <div className={styles.middleContainer} style={{ gridColumn: '13 / 17', textAlign: isMobile ? 'left' : 'right' }}>
         <AppearTitle isFooter>
           <div className="p-x">© 2026 · Nument AI</div>
-          <div className={clsx('p-x', styles.middleText)}>All Rights Reserved</div>
+          <div className={clsx('p-x', styles.middleText)}>Founded by Abhigyan · All Rights Reserved</div>
         </AppearTitle>
       </div>
 

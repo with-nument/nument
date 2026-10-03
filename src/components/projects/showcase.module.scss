@@ -1,7 +1,7 @@
 @import '@src/styles/functions';
 
 // The section itself stays transparent so the shared 3D canvas shows through the device windows;
-// everything else paints var(--white), exactly like the Clients section's badge windows.
+// everything else paints var(--white).
 .root {
   position: relative;
   padding-top: 0;
@@ -110,13 +110,14 @@
   }
 }
 
+.title {
+  line-height: 105%;
+  letter-spacing: -0.02em;
+  transition: opacity 0.35s ease;
+}
+
 .titleLink {
   text-decoration: none;
-  .title {
-    line-height: 105%;
-    letter-spacing: -0.02em;
-    transition: opacity 0.35s ease;
-  }
   &:hover .title {
     opacity: 0.7;
   }

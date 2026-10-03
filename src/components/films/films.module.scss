@@ -5,20 +5,20 @@ $ease: cubic-bezier(0.4, 0, 0.1, 1);
 .root {
   background-color: var(--white);
   padding-bottom: calc(var(--layout-columns-gap) * 3.5);
-  row-gap: calc(var(--layout-columns-gap) * 3);
 }
 
-// Editorial stagger on desktop: the founder's film leads (11 columns, caption to its right); the Nument
-// film follows smaller and offset to the right with its caption on the left. Stacked on mobile.
+// The film takes 11 of 16 columns with its caption beside it, bottom-aligned; stacked on mobile.
 .card {
   grid-column: 1 / 17;
   display: grid;
   grid-template-columns: repeat(16, minmax(0, 1fr));
   column-gap: var(--layout-columns-gap);
+  align-items: end;
   @include mobile {
     grid-column: 1 / 7;
     display: flex;
     flex-direction: column;
+    align-items: stretch;
     gap: calc(var(--layout-columns-gap) * 1.1);
   }
 
@@ -30,34 +30,19 @@ $ease: cubic-bezier(0.4, 0, 0.1, 1);
       transform 0.9s $ease;
   }
   > *:nth-child(2) {
-    transition-delay: 0.1s;
+    transition-delay: 0.12s;
   }
   &.visible > * {
     opacity: 1;
     transform: none;
   }
-}
 
-.lead {
-  align-items: end;
   .player {
     grid-column: 1 / 12;
     grid-row: 1;
   }
   .caption {
     grid-column: 12 / 17;
-    grid-row: 1;
-  }
-}
-
-.second {
-  align-items: center;
-  .player {
-    grid-column: 9 / 17;
-    grid-row: 1;
-  }
-  .caption {
-    grid-column: 2 / 8;
     grid-row: 1;
   }
 }
@@ -140,13 +125,9 @@ $ease: cubic-bezier(0.4, 0, 0.1, 1);
 }
 
 .kicker {
-  display: flex;
-  gap: calc(var(--layout-columns-gap) * 0.6);
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  span:last-child {
-    opacity: 0.55;
-  }
+  opacity: 0.55;
 }
 
 .title {
@@ -154,31 +135,7 @@ $ease: cubic-bezier(0.4, 0, 0.1, 1);
   letter-spacing: -0.02em;
 }
 
-.credit {
-  display: flex;
-  flex-direction: column;
-  gap: 0.25vw;
-  margin-top: calc(var(--layout-columns-gap) * 0.2);
-  padding-top: calc(var(--layout-columns-gap) * 0.45);
-  border-top: 1px solid rgba(17, 18, 22, 0.1);
-  @include mobile {
-    gap: 1vw;
-  }
-  span:first-child {
-    font-weight: 600;
-  }
-}
-
-.affiliation {
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  opacity: 0.55;
-}
-
 .text {
-  max-width: 34vw;
   opacity: 0.72;
-  @include mobile {
-    max-width: none;
-  }
+  margin-bottom: calc(var(--layout-columns-gap) * 0.3);
 }

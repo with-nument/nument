@@ -10,6 +10,7 @@ import useIntersected from '@src/hooks/useIntersected';
 function ProjectRow({ project, index, reverse }) {
   const infoRef = useRef();
   const visible = useIntersected(infoRef, 0.2);
+  const title = <h3 className={clsx('h3', 'bold', styles.title)}>{project.title}</h3>;
 
   return (
     <div className={clsx(styles.row, reverse && styles.reverse)}>
@@ -18,12 +19,17 @@ function ProjectRow({ project, index, reverse }) {
         <div className={clsx('p-x', styles.kicker)}>
           <span>{String(index + 1).padStart(2, '0')}</span>
           <span>{project.industry}</span>
-          <span>{project.date}</span>
+          {project.date && <span>{project.date}</span>}
         </div>
-        <Link href={project.link} scroll={false} className={styles.titleLink} aria-label={`Open the ${project.title} case study`}>
-          <h3 className={clsx('h3', 'bold', styles.title)}>{project.title}</h3>
-        </Link>
-        <div className={clsx('p-l', styles.client)}>for {project.client}</div>
+        {/* Projects without a case study page (`link`) show no link. */}
+        {project.link ? (
+          <Link href={project.link} scroll={false} className={styles.titleLink} aria-label={`Open the ${project.title} case study`}>
+            {title}
+          </Link>
+        ) : (
+          title
+        )}
+        {project.client && <div className={clsx('p-l', styles.client)}>for {project.client}</div>}
         <h6 className={clsx('h6', styles.summary)}>{project.summary}</h6>
         <div className={styles.metrics}>
           {project.metrics.slice(0, 2).map((metric) => (
@@ -41,7 +47,7 @@ function ProjectRow({ project, index, reverse }) {
               </span>
             ))}
           </div>
-          <ButtonLink href={project.link} label="VIEW CASE STUDY" />
+          {project.link && <ButtonLink href={project.link} label="VIEW CASE STUDY" />}
         </div>
       </div>
     </div>

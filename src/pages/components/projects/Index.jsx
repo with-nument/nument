@@ -3,7 +3,7 @@ import Films from '@src/components/films/Films';
 import clsx from 'clsx';
 import styles from '@src/pages/components/projects/styles/projects.module.scss';
 
-// Home: "Inside Nument" — the founder's message and a project film.
+// Home: "Inside Nument", the Nument film.
 function Projects() {
   return (
     <>
