@@ -35,17 +35,9 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# generated asset drafts
-/scripts/assets/raw/
 __pycache__/
 *.pyc
 
-# remotion film project
-/film/node_modules/
-/film/out/
-/film/refs/
-/film/assets/mix/
-/film/assets/music/
-/film/assets/sfx/
-/film/assets/vo/**/*.wav
-/film/assets/vo/**/*.m4a
+# local tooling, not part of the website (video project, asset generation)
+/film/
+/scripts/

@@ -40,10 +40,6 @@ npm start
 | Footer and social links | `src/components/dom/Footer.jsx`, `src/components/dom/navbar/constants/footerLinks.js` |
 | Page titles and SEO | `src/pages/*.page.jsx`, `src/components/dom/CustomHead.jsx` |
 
-## Asset tooling
-
-`scripts/assets/` holds the scripts used to produce the site's images, videos and 3D textures (Gemini image generation, Veo clips, ID-card and cover rendering). They read `GEMINI_API_KEY` from `.env.local`; raw outputs go to `scripts/assets/raw/` (git-ignored).
-
 ## License
 
 Copyright (c) 2026 Nument AI. All rights reserved. See `LICENSE`. Third-party notices are in `THIRD_PARTY_NOTICES.md`.
