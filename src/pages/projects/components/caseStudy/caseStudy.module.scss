@@ -1,0 +1,250 @@
+@import '@src/styles/functions';
+
+// Every section paints var(--white) (the project's own light colour) except the 3D stage window.
+
+.reveal {
+  opacity: 0;
+  transform: translate3d(0, 2vw, 0);
+  transition:
+    opacity 1s cubic-bezier(0.4, 0, 0.1, 1),
+    transform 1s cubic-bezier(0.4, 0, 0.1, 1);
+  &.visible {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.hero {
+  background-color: var(--white);
+  padding-top: calc(var(--layout-columns-gap) * 5.5);
+  padding-bottom: calc(var(--layout-columns-gap) * 3);
+  row-gap: calc(var(--layout-columns-gap) * 1.2);
+  @include mobile {
+    padding-top: calc(var(--layout-columns-gap) * 4);
+  }
+
+  .kicker {
+    grid-column: 1 / 17;
+    display: flex;
+    gap: var(--layout-columns-gap);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    span:not(:first-child) {
+      opacity: 0.55;
+    }
+    @include mobile {
+      grid-column: 1 / 7;
+    }
+  }
+
+  .title {
+    grid-column: 1 / 17;
+    font-size: 9vw;
+    line-height: 100%;
+    letter-spacing: -0.035em;
+    font-weight: 750;
+    @include mobile {
+      grid-column: 1 / 7;
+      font-size: 14vw;
+    }
+  }
+
+  .facts {
+    grid-column: 1 / 6;
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--layout-columns-gap) * 0.7);
+    padding-top: calc(var(--layout-columns-gap) * 0.6);
+    @include mobile {
+      grid-column: 1 / 7;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    dt {
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      opacity: 0.55;
+    }
+    dd {
+      margin: 0.2vw 0 0;
+    }
+  }
+
+  .lede {
+    grid-column: 7 / 17;
+    padding-top: calc(var(--layout-columns-gap) * 0.4);
+    p {
+      line-height: 125%;
+      letter-spacing: -0.01em;
+    }
+    @include mobile {
+      grid-column: 1 / 7;
+      padding-top: var(--layout-columns-gap);
+    }
+  }
+}
+
+// The live 3D devices, framed like the rest of the site's windows.
+.stage {
+  position: relative;
+  padding-top: 0;
+  padding-bottom: 0;
+  box-shadow:
+    inset calc(var(--layout-margin) * -1.0065) 0 0 0 var(--white),
+    inset calc(var(--layout-margin) * 1.0065) 0 0 0 var(--white);
+  .window {
+    position: relative;
+    grid-column: 1 / 17;
+    height: 52vw;
+    border-radius: var(--layout-columns-gap);
+    box-shadow: 0 0 0 var(--layout-columns-gap) var(--white);
+    cursor: grab;
+    touch-action: pan-y;
+    &:active {
+      cursor: grabbing;
+    }
+    @include mobile {
+      grid-column: 1 / 7;
+      height: 100vw;
+      border-radius: calc(var(--layout-columns-gap) * 0.5);
+      box-shadow: 0 0 0 calc(var(--layout-columns-gap) * 0.5) var(--white);
+    }
+  }
+}
+
+.metrics {
+  background-color: var(--white);
+  padding-top: calc(var(--layout-columns-gap) * 4);
+  padding-bottom: calc(var(--layout-columns-gap) * 2);
+  .metric {
+    grid-column: span 5;
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--layout-columns-gap) * 0.5);
+    padding-top: var(--layout-columns-gap);
+    border-top: 1px solid rgba(40, 40, 43, 0.16);
+    @include mobile {
+      grid-column: 1 / 7;
+    }
+    &:nth-child(2) {
+      transition-delay: 0.08s;
+    }
+    &:nth-child(3) {
+      transition-delay: 0.16s;
+    }
+    .value {
+      font-weight: 750;
+      line-height: 100%;
+      letter-spacing: -0.04em;
+    }
+    span:last-child {
+      opacity: 0.6;
+      max-width: 22vw;
+      @include mobile {
+        max-width: none;
+      }
+    }
+  }
+}
+
+.story {
+  background-color: var(--white);
+  padding-top: calc(var(--layout-columns-gap) * 3);
+  padding-bottom: calc(var(--layout-columns-gap) * 4);
+  row-gap: calc(var(--layout-columns-gap) * 2.6);
+  .block {
+    grid-column: 1 / 17;
+    display: grid;
+    grid-template-columns: repeat(16, minmax(0, 1fr));
+    column-gap: var(--layout-columns-gap);
+    @include mobile {
+      grid-column: 1 / 7;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      row-gap: calc(var(--layout-columns-gap) * 0.5);
+    }
+  }
+  .label {
+    grid-column: 1 / 5;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    opacity: 0.55;
+    padding-top: 0.5vw;
+    @include mobile {
+      grid-column: 1 / 7;
+    }
+  }
+  .text {
+    grid-column: 6 / 16;
+    font-size: 2.15vw;
+    line-height: 140%;
+    @include mobile {
+      grid-column: 1 / 7;
+      font-size: 4.6vw;
+    }
+  }
+}
+
+.gallery {
+  background-color: var(--white);
+  padding-bottom: calc(var(--layout-columns-gap) * 5);
+  row-gap: calc(var(--layout-columns-gap) * 1.5);
+  .galleryItem {
+    grid-column: 2 / 16;
+    @include mobile {
+      grid-column: 1 / 7;
+    }
+  }
+  .media {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: var(--layout-columns-gap);
+    background-color: rgba(40, 40, 43, 0.05);
+    box-shadow: 0 2.5vw 5vw -2vw rgba(20, 20, 40, 0.22);
+    @include mobile {
+      border-radius: calc(var(--layout-columns-gap) * 0.5);
+    }
+    &.big {
+      aspect-ratio: 190 / 101;
+    }
+    &.medium {
+      aspect-ratio: 16 / 9;
+    }
+    video {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+  .phones {
+    grid-column: 2 / 16;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: calc(var(--layout-columns-gap) * 1.2);
+    padding: calc(var(--layout-columns-gap) * 2) calc(var(--layout-columns-gap) * 2.4);
+    border-radius: var(--layout-columns-gap);
+    background-color: rgba(40, 40, 43, 0.05);
+    @include mobile {
+      grid-column: 1 / 7;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      padding: var(--layout-columns-gap);
+      gap: var(--layout-columns-gap);
+      border-radius: calc(var(--layout-columns-gap) * 0.5);
+    }
+  }
+  .phone {
+    position: relative;
+    aspect-ratio: 243 / 491;
+    overflow: hidden;
+    border-radius: 2.2vw;
+    box-shadow:
+      0 0 0 0.45vw #16171b,
+      0 2vw 4vw -1.5vw rgba(20, 20, 40, 0.35);
+    @include mobile {
+      border-radius: 5vw;
+      box-shadow:
+        0 0 0 1.2vw #16171b,
+        0 4vw 8vw -3vw rgba(20, 20, 40, 0.35);
+    }
+  }
+}

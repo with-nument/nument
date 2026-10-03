@@ -1,0 +1,46 @@
+@import '@src/styles/functions';
+
+.root {
+  position: fixed;
+  z-index: 2;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  padding: var(--layout-columns-gap) var(--layout-margin) 0px
+    var(--layout-margin);
+  width: 100%;
+  pointer-events: none;
+  scale: 1;
+  .innerHeader {
+    height: 3.1vw;
+    @include mobile {
+      height: 6.5vw;
+    }
+
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    > a {
+      pointer-events: all;
+    }
+    .rightContainer {
+      pointer-events: all;
+
+      display: flex;
+      gap: var(--layout-columns-gap);
+      align-items: center;
+    }
+  }
+}
+
+// Header logo: dark on light sections, light over dark ones (see useBackdropTone).
+.logo {
+  color: var(--black);
+  transition: color 0.35s cubic-bezier(0.4, 0, 0.1, 1);
+}
+.logoOnDark {
+  color: #f0f4f1;
+}

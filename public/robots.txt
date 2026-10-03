@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://nument.in/
+
+# Sitemaps
+Sitemap: https://nument.in/sitemap.xml

@@ -1,0 +1,183 @@
+@import '@src/styles/functions';
+
+.root {
+  position: fixed;
+  top: 0;
+  z-index: 5;
+  width: 100vw;
+  height: 100vh;
+  height: calc(100 * var(--svh, 1vh));
+  height: 100svh;
+  color: #28282b;
+  background-color: #f0f4f1;
+  .innerContainer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .fullNameContainer {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .fullName {
+        text-align: center;
+        display: inline-block;
+        overflow: hidden;
+        color: #020002;
+        > span {
+          position: relative;
+          top: 0px;
+        }
+      }
+    }
+    .shortNameContainer {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .shortName {
+        text-align: center;
+        display: inline-block;
+        overflow: hidden;
+        opacity: 0;
+        color: #020002;
+        > span {
+          position: relative;
+          top: 12vw;
+        }
+      }
+    }
+  }
+  .progressContainer {
+    bottom: 2svh;
+    right: 0;
+    position: absolute;
+    .progress {
+      text-align: center;
+      display: inline-block;
+      overflow: hidden;
+      color: #020002;
+      > span {
+        position: relative;
+        top: 0px;
+      }
+    }
+  }
+}
+.other {
+  display: none;
+}
+
+// "Enter" gate shown when the intro counter reaches 100%: one click starts the site with sound.
+.gate {
+  position: absolute;
+  left: 50%;
+  top: calc(50% + 6.5vw);
+  transform: translate3d(-50%, 1vw, 0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.1vw;
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    opacity 0.7s cubic-bezier(0.4, 0, 0.1, 1),
+    transform 0.7s cubic-bezier(0.4, 0, 0.1, 1);
+  @include mobile {
+    top: calc(50% + 16vw);
+    gap: 4vw;
+  }
+  &.gateOpen {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate3d(-50%, 0, 0);
+  }
+
+  .enter {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8vw;
+    height: 3.4vw;
+    padding: 0 2.2vw;
+    border-radius: 9vw;
+    background: #28282b;
+    color: #f0f4f1;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    box-shadow:
+      0 0.32vw 0.52vw #0000000a,
+      0 0.12vw 0.22vw #0000000a;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.1, 1);
+    @include mobile {
+      height: 12vw;
+      padding: 0 7vw;
+      gap: 2.6vw;
+    }
+    &:hover {
+      transform: scale(1.04);
+    }
+  }
+
+  .bars {
+    display: flex;
+    align-items: center;
+    gap: 0.16vw;
+    height: 0.9vw;
+    @include mobile {
+      gap: 0.6vw;
+      height: 3.2vw;
+    }
+    i {
+      display: block;
+      width: 0.13vw;
+      height: 100%;
+      border-radius: 1vw;
+      background: currentColor;
+      animation: gateBars 1.1s cubic-bezier(0.4, 0, 0.1, 1) infinite alternate;
+      @include mobile {
+        width: 0.5vw;
+      }
+      &:nth-child(2) {
+        animation-delay: -0.5s;
+      }
+      &:nth-child(3) {
+        animation-delay: -0.2s;
+      }
+      &:nth-child(4) {
+        animation-delay: -0.8s;
+      }
+    }
+  }
+
+  .silent {
+    background: transparent;
+    color: #28282b;
+    opacity: 0.55;
+    text-decoration: underline;
+    text-underline-offset: 0.25em;
+    transition: opacity 0.3s ease;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+@keyframes gateBars {
+  from {
+    transform: scaleY(0.25);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}

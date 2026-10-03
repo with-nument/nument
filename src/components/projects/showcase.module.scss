@@ -1,0 +1,195 @@
+@import '@src/styles/functions';
+
+// The section itself stays transparent so the shared 3D canvas shows through the device windows;
+// everything else paints var(--white), exactly like the Clients section's badge windows.
+.root {
+  position: relative;
+  padding-top: 0;
+  padding-bottom: 0;
+  row-gap: 0;
+  box-shadow:
+    inset calc(var(--layout-margin) * -1.0065) 0 0 0 var(--white),
+    inset calc(var(--layout-margin) * 1.0065) 0 0 0 var(--white);
+}
+
+.row {
+  grid-column: 1 / 17;
+  display: grid;
+  grid-template-columns: repeat(16, minmax(0, 1fr));
+  column-gap: var(--layout-columns-gap);
+  @include mobile {
+    grid-column: 1 / 7;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+}
+
+.window {
+  position: relative;
+  grid-column: 1 / 10;
+  grid-row: 1;
+  height: 38vw;
+  border-radius: var(--layout-columns-gap);
+  box-shadow: 0 0 0 var(--layout-columns-gap) var(--white);
+  cursor: grab;
+  touch-action: pan-y;
+  &:active {
+    cursor: grabbing;
+  }
+  @include mobile {
+    grid-column: 1 / 7;
+    height: 92vw;
+    border-radius: calc(var(--layout-columns-gap) * 0.5);
+    box-shadow: 0 0 0 calc(var(--layout-columns-gap) * 0.5) var(--white);
+  }
+}
+
+.info {
+  grid-column: 10 / 17;
+  padding-left: calc(var(--layout-columns-gap) * 2.2);
+  grid-row: 1;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: calc(var(--layout-columns-gap) * 0.9);
+  background-color: var(--white);
+  box-shadow: 0 0 0 var(--layout-columns-gap) var(--white);
+  @include mobile {
+    grid-column: 1 / 7;
+    grid-row: 2;
+    padding: calc(var(--layout-columns-gap) * 1.6) 0 calc(var(--layout-columns-gap) * 0.4);
+    padding-left: 0;
+    gap: calc(var(--layout-columns-gap) * 0.6);
+    box-shadow: 0 0 0 calc(var(--layout-columns-gap) * 0.5) var(--white);
+  }
+
+  // Staggered fade-up when the row scrolls into view.
+  > * {
+    opacity: 0;
+    transform: translate3d(0, 1.6vw, 0);
+    transition:
+      opacity 0.9s cubic-bezier(0.4, 0, 0.1, 1),
+      transform 0.9s cubic-bezier(0.4, 0, 0.1, 1);
+    @for $i from 1 through 7 {
+      &:nth-child(#{$i}) {
+        transition-delay: #{($i - 1) * 0.07}s;
+      }
+    }
+  }
+  &.visible > * {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.reverse {
+  .window {
+    grid-column: 8 / 17;
+    @include mobile {
+      grid-column: 1 / 7;
+    }
+  }
+  .info {
+    grid-column: 1 / 8;
+    padding-left: 0;
+    padding-right: calc(var(--layout-columns-gap) * 2.2);
+    @include mobile {
+      grid-column: 1 / 7;
+      padding-right: 0;
+    }
+  }
+}
+
+.kicker {
+  display: flex;
+  gap: calc(var(--layout-columns-gap) * 0.8);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  span:not(:first-child) {
+    opacity: 0.55;
+  }
+}
+
+.titleLink {
+  text-decoration: none;
+  .title {
+    line-height: 105%;
+    letter-spacing: -0.02em;
+    transition: opacity 0.35s ease;
+  }
+  &:hover .title {
+    opacity: 0.7;
+  }
+}
+
+.client {
+  opacity: 0.6;
+  margin-top: calc(var(--layout-columns-gap) * -0.6);
+}
+
+.summary {
+  max-width: 30vw;
+  @include mobile {
+    max-width: none;
+  }
+}
+
+.metrics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--layout-columns-gap);
+  padding: calc(var(--layout-columns-gap) * 0.8) 0;
+  border-top: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
+  border-color: rgba(40, 40, 43, 0.14);
+  .metric {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3vw;
+    .value {
+      font-weight: 750;
+      line-height: 100%;
+      letter-spacing: -0.03em;
+    }
+    span:last-child {
+      opacity: 0.6;
+      @include mobile {
+        line-height: 130%;
+      }
+    }
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--layout-columns-gap);
+  flex-wrap: wrap;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(var(--layout-columns-gap) * 0.3);
+}
+
+.tag {
+  padding: 0.35vw 0.9vw;
+  border-radius: 9vw;
+  border: 1px solid rgba(40, 40, 43, 0.22);
+  white-space: nowrap;
+  @include mobile {
+    padding: 1vw 2.6vw;
+  }
+}
+
+.spacer {
+  grid-column: 1 / 17;
+  height: calc(var(--layout-columns-gap) * 4);
+  background-color: var(--white);
+  @include mobile {
+    grid-column: 1 / 7;
+    height: calc(var(--layout-columns-gap) * 2);
+  }
+}
