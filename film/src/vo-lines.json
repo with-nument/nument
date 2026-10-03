@@ -1,0 +1,68 @@
+{
+  "voice": {
+    "name": "Lauren - Lively Narrator",
+    "id": "a33f7a4c-100f-41cf-a1fd-5822e8fc253f"
+  },
+  "lines": [
+    {
+      "id": "L1",
+      "language": "en",
+      "text": "Every business has an idea it never built."
+    },
+    {
+      "id": "L2a",
+      "language": "en",
+      "text": "A tool that saves hours."
+    },
+    {
+      "id": "L2b",
+      "language": "en",
+      "text": "An app customers love."
+    },
+    {
+      "id": "L2c",
+      "language": "en",
+      "text": "An agent that never sleeps."
+    },
+    {
+      "id": "L3a",
+      "language": "en",
+      "text": "But most never get made."
+    },
+    {
+      "id": "L3b",
+      "language": "en",
+      "text": "Not enough engineers. Not enough time."
+    },
+    {
+      "id": "L4",
+      "language": "en",
+      "text": "Nument changes that."
+    },
+    {
+      "id": "L5",
+      "language": "en",
+      "text": "We design and build AI agents, apps and internal tools, from idea to live, in weeks."
+    },
+    {
+      "id": "L6a",
+      "language": "en",
+      "text": "Senior engineering. AI at the core."
+    },
+    {
+      "id": "L6b",
+      "language": "en",
+      "text": "Built around the way you work."
+    },
+    {
+      "id": "L7a",
+      "language": "en",
+      "text": "Nument."
+    },
+    {
+      "id": "L7b",
+      "language": "en",
+      "text": "Built in India, for the world."
+    }
+  ]
+}

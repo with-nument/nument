@@ -1,0 +1,36 @@
+{
+ "text": "Senior engineering. AI at the core.",
+ "language": "en",
+ "words": [
+  {
+   "word": "Senior",
+   "start": 0.38699925,
+   "end": 0.83591837
+  },
+  {
+   "word": "engineering.",
+   "start": 0.83591837,
+   "end": 1.3931973
+  },
+  {
+   "word": "AI",
+   "start": 1.7337567,
+   "end": 2.0278761
+  },
+  {
+   "word": "at",
+   "start": 2.0278761,
+   "end": 2.120756
+  },
+  {
+   "word": "the",
+   "start": 2.120756,
+   "end": 2.2136357
+  },
+  {
+   "word": "core.",
+   "start": 2.2136357,
+   "end": 2.5387151
+  }
+ ]
+}

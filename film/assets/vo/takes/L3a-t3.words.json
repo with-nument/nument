@@ -1,0 +1,31 @@
+{
+ "text": "But most never get made.",
+ "language": "en",
+ "words": [
+  {
+   "word": "But",
+   "start": 0.7739985,
+   "end": 0.9442782
+  },
+  {
+   "word": "most",
+   "start": 0.9442782,
+   "end": 1.2074376
+  },
+  {
+   "word": "never",
+   "start": 1.2074376,
+   "end": 1.5634769
+  },
+  {
+   "word": "get",
+   "start": 1.5634769,
+   "end": 1.7337567
+  },
+  {
+   "word": "made.",
+   "start": 1.7337567,
+   "end": 2.1671958
+  }
+ ]
+}

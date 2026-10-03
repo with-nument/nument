@@ -1,0 +1,46 @@
+{
+ "text": "Every business has an idea it never built.",
+ "language": "en",
+ "words": [
+  {
+   "word": "Every",
+   "start": 0.52631897,
+   "end": 0.88235825
+  },
+  {
+   "word": "business",
+   "start": 0.88235825,
+   "end": 1.4705971
+  },
+  {
+   "word": "has",
+   "start": 1.4705971,
+   "end": 1.6408768
+  },
+  {
+   "word": "an",
+   "start": 1.6408768,
+   "end": 1.7337567
+  },
+  {
+   "word": "idea",
+   "start": 1.7337567,
+   "end": 2.1517158
+  },
+  {
+   "word": "it",
+   "start": 2.1517158,
+   "end": 2.3219955
+  },
+  {
+   "word": "never",
+   "start": 2.3219955,
+   "end": 2.6006348
+  },
+  {
+   "word": "built.",
+   "start": 2.6006348,
+   "end": 3.034074
+  }
+ ]
+}

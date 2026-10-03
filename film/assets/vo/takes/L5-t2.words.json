@@ -1,0 +1,86 @@
+{
+ "text": "We design and build AI agents, apps and internal tools, from idea to live, in weeks.",
+ "language": "en",
+ "words": [
+  {
+   "word": "We",
+   "start": 0.09287982,
+   "end": 0.27863947
+  },
+  {
+   "word": "design",
+   "start": 0.27863947,
+   "end": 0.6346788
+  },
+  {
+   "word": "and",
+   "start": 0.6346788,
+   "end": 0.7585185
+  },
+  {
+   "word": "build",
+   "start": 0.7585185,
+   "end": 1.021678
+  },
+  {
+   "word": "AI",
+   "start": 1.0526379,
+   "end": 1.3931973
+  },
+  {
+   "word": "agents,",
+   "start": 1.3931973,
+   "end": 1.8421164
+  },
+  {
+   "word": "apps",
+   "start": 1.8421164,
+   "end": 2.2600756
+  },
+  {
+   "word": "and",
+   "start": 2.2600756,
+   "end": 2.4613152
+  },
+  {
+   "word": "internal",
+   "start": 2.4613152,
+   "end": 2.8792744
+  },
+  {
+   "word": "tools,",
+   "start": 2.8792744,
+   "end": 3.3127136
+  },
+  {
+   "word": "from",
+   "start": 3.3127136,
+   "end": 3.4829931
+  },
+  {
+   "word": "idea",
+   "start": 3.4829931,
+   "end": 3.8235526
+  },
+  {
+   "word": "to",
+   "start": 3.8235526,
+   "end": 3.9628723
+  },
+  {
+   "word": "live,",
+   "start": 3.9628723,
+   "end": 4.3343916
+  },
+  {
+   "word": "in",
+   "start": 4.3808312,
+   "end": 4.597551
+  },
+  {
+   "word": "weeks.",
+   "start": 4.597551,
+   "end": 5.04647
+  }
+ ]
+}

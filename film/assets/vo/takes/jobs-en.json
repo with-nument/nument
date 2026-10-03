@@ -1,0 +1,98 @@
+[
+ {
+  "name": "L3a-t1",
+  "voice": "a33f7a4c-100f-41cf-a1fd-5822e8fc253f",
+  "language": "en",
+  "text": "But most never get made.",
+  "emotion": "calm",
+  "speed": 1.0
+ },
+ {
+  "name": "L3a-t2",
+  "voice": "a33f7a4c-100f-41cf-a1fd-5822e8fc253f",
+  "language": "en",
+  "text": "But most never get made.",
+  "emotion": "content",
+  "speed": 1.0
+ },
+ {
+  "name": "L3a-t3",
+  "voice": "a33f7a4c-100f-41cf-a1fd-5822e8fc253f",
+  "language": "en",
+  "text": "But most never get made.",
+  "emotion": "calm",
+  "speed": 1.06
+ },
+ {
+  "name": "L3b-t1",
+  "voice": "a33f7a4c-100f-41cf-a1fd-5822e8fc253f",
+  "language": "en",
+  "text": "Not enough engineers. Not enough time.",
+  "emotion": "calm",
+  "speed": 1.0
+ },
+ {
+  "name": "L3b-t2",
+  "voice": "a33f7a4c-100f-41cf-a1fd-5822e8fc253f",
+  "language": "en",
+  "text": "Not enough engineers. Not enough time.",
+  "emotion": "content",
+  "speed": 1.0
+ },
+ {
+  "name": "L3b-t3",
+  "voice": "a33f7a4c-100f-41cf-a1fd-5822e8fc253f",
+  "language": "en",
+  "text": "Not enough engineers. Not enough time.",
+  "emotion": "calm",
+  "speed": 1.06
+ },
+ {
+  "name": "L6b-t1",
+  "voice": "a33f7a4c-100f-41cf-a1fd-5822e8fc253f",
+  "language": "en",
+  "text": "Built around the way you work.",
+  "emotion": "calm",
+  "speed": 1.0
+ },
+ {
+  "name": "L6b-t2",
+  "voice": "a33f7a4c-100f-41cf-a1fd-5822e8fc253f",
+  "language": "en",
+  "text": "Built around the way you work.",
+  "emotion": "content",
+  "speed": 1.0
+ },
+ {
+  "name": "L6b-t3",
+  "voice": "a33f7a4c-100f-41cf-a1fd-5822e8fc253f",
+  "language": "en",
+  "text": "Built around the way you work.",
+  "emotion": "calm",
+  "speed": 1.06
+ },
+ {
+  "name": "L7b-t1",
+  "voice": "a33f7a4c-100f-41cf-a1fd-5822e8fc253f",
+  "language": "en",
+  "text": "Built in India, for the world.",
+  "emotion": "calm",
+  "speed": 1.0
+ },
+ {
+  "name": "L7b-t2",
+  "voice": "a33f7a4c-100f-41cf-a1fd-5822e8fc253f",
+  "language": "en",
+  "text": "Built in India, for the world.",
+  "emotion": "content",
+  "speed": 1.0
+ },
+ {
+  "name": "L7b-t3",
+  "voice": "a33f7a4c-100f-41cf-a1fd-5822e8fc253f",
+  "language": "en",
+  "text": "Built in India, for the world.",
+  "emotion": "calm",
+  "speed": 1.06
+ }
+]

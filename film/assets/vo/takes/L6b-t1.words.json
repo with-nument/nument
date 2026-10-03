@@ -1,0 +1,36 @@
+{
+ "text": "Built around the way you work.",
+ "language": "en",
+ "words": [
+  {
+   "word": "Built",
+   "start": 0,
+   "end": 0.27863947
+  },
+  {
+   "word": "around",
+   "start": 0.27863947,
+   "end": 0.54179895
+  },
+  {
+   "word": "the",
+   "start": 0.54179895,
+   "end": 0.6346788
+  },
+  {
+   "word": "way",
+   "start": 0.6346788,
+   "end": 0.7739985
+  },
+  {
+   "word": "you",
+   "start": 0.7739985,
+   "end": 0.9287982
+  },
+  {
+   "word": "work.",
+   "start": 0.9287982,
+   "end": 1.3777173
+  }
+ ]
+}

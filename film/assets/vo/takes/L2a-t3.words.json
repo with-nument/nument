@@ -1,0 +1,31 @@
+{
+ "text": "A tool that saves hours.",
+ "language": "en",
+ "words": [
+  {
+   "word": "A",
+   "start": 0.69659865,
+   "end": 0.8204384
+  },
+  {
+   "word": "tool",
+   "start": 0.8204384,
+   "end": 1.1145579
+  },
+  {
+   "word": "that",
+   "start": 1.1145579,
+   "end": 1.2848375
+  },
+  {
+   "word": "saves",
+   "start": 1.2848375,
+   "end": 1.5634769
+  },
+  {
+   "word": "hours.",
+   "start": 1.5634769,
+   "end": 2.120756
+  }
+ ]
+}

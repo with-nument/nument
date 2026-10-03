@@ -1,0 +1,36 @@
+{
+ "text": "Not enough engineers. Not enough time.",
+ "language": "en",
+ "words": [
+  {
+   "word": "Not",
+   "start": 0.03095994,
+   "end": 0.23219955
+  },
+  {
+   "word": "enough",
+   "start": 0.23219955,
+   "end": 0.4643991
+  },
+  {
+   "word": "engineers.",
+   "start": 0.4643991,
+   "end": 1.1300378
+  },
+  {
+   "word": "Not",
+   "start": 1.7492366,
+   "end": 2.012396
+  },
+  {
+   "word": "enough",
+   "start": 2.012396,
+   "end": 2.2136357
+  },
+  {
+   "word": "time.",
+   "start": 2.2136357,
+   "end": 2.647075
+  }
+ ]
+}
